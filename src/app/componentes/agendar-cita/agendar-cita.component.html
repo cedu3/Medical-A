@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <button mat-stroked-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>Volver
+  </button>
+  <span>Agendar Cita</span>
+</mat-toolbar>
+
+<div class="card">
+  <h2>Agendar Cita</h2>
+
+  <form [formGroup]="citaForm" (ngSubmit)="agendarCita()">
+    <div class="form-group">
+      <label for="paciente">Paciente:</label>
+      <select id="paciente" formControlName="pacienteId">
+        <option *ngFor="let paciente of pacientes" [value]="paciente.id">
+          {{ paciente.nombre }} (DNI: {{ paciente.dni }})
+        </option>
+      </select>
+      <div *ngIf="citaForm.get('pacienteId')?.invalid && citaForm.get('pacienteId')?.touched" class="error-message">
+        Por favor, selecciona un paciente.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="especialista">Especialista:</label>
+      <select id="especialista" formControlName="especialistaId">
+        <option *ngFor="let especialista of especialistas" [value]="especialista.id">
+          {{ especialista.nombre }} ({{ especialista.especialidad }})
+        </option>
+      </select>
+      <div *ngIf="citaForm.get('especialistaId')?.invalid && citaForm.get('especialistaId')?.touched" class="error-message">
+        Por favor, selecciona un especialista.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fechaHora">Fecha y Hora:</label>
+      <input type="datetime-local" id="fechaHora" formControlName="fechaHora">
+      <div *ngIf="citaForm.get('fechaHora')?.invalid && citaForm.get('fechaHora')?.touched" class="error-message">
+        Por favor, selecciona una fecha y hora.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!citaForm.valid">Agendar Cita</button>
+  </form>
+</div>

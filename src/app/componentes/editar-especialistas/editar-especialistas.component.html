@@ -1,0 +1,17 @@
+<div *ngIf="especialista" class="editar-especialista-container">
+    <h2>Editar Especialista</h2>
+    <form (ngSubmit)="actualizarEspecialista()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="especialista.nombre" name="nombre" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Especialidad</mat-label>
+        <input matInput [(ngModel)]="especialista.especialidad" name="especialidad" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Actualizar Especialista</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button mat-stroked-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>Volver
+  </button>
+  <span>Registro de Paciente</span>
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-title>Registro de Paciente</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="pacienteForm" (ngSubmit)="registrarPaciente()">
+    <mat-form-field appearance="outline">
+        <mat-label>DNI</mat-label>
+        <input matInput formControlName="dni" placeholder="Ingrese el DNI">
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput formControlName="nombre" placeholder="Ingrese el nombre completo">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" placeholder="Fecha de Nacimiento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput formControlName="correoElectronico" placeholder="Ingrese el correo electrónico">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número de Teléfono</mat-label>
+        <input matInput formControlName="numeroTelefono" placeholder="Ingrese el número de teléfono">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Registrar Paciente</button>
+    </form>
+  </mat-card-content>
+</mat-card>

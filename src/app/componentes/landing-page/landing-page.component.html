@@ -1,0 +1,71 @@
+<div class="landing-container">
+
+  <mat-toolbar class="toolbar" color="primary">
+    <span class="toolbar-title">Clínica Audiológica</span>
+    <span class="spacer"></span>
+      <button mat-button class="toolbar-button" routerLink="/registro">
+      <mat-icon>person_add</mat-icon> Registrar Paciente
+      </button>
+      <button mat-button class="toolbar-button" routerLink="/agendar-cita">
+      <mat-icon>calendar_today</mat-icon> Agendar Cita
+      </button>
+      <button mat-button class="toolbar-button" routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon> Ingresar al dashboard
+        </button>
+  </mat-toolbar>
+
+  <div class="banner">
+    <div class="banner-content">
+      <h1>Tu salud auditiva es nuestra prioridad</h1>
+      <p>
+        Ofrecemos soluciones integrales para el cuidado de tu audición.
+      </p>
+      <button mat-raised-button color="accent" routerLink="/agendar-cita">Agendar una cita</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <mat-grid-list cols="4" rowHeight="300px">
+      <mat-grid-tile>
+        <mat-card class="service-card">
+          <mat-card-header>
+            <mat-card-title>Audiometrías</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Evaluaciones precisas de tu capacidad auditiva.</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="service-card">
+          <mat-card-header>
+            <mat-card-title>Adaptación de Audífonos</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Encuentra el audífono perfecto para tus necesidades.</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="service-card">
+          <mat-card-header>
+            <mat-card-title>Terapia Auditiva</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Mejora tu comunicación y calidad de vida.</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="service-card">
+          <mat-card-header>
+            <mat-card-title>Rehabilitación Vestibular</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Recupera tu equilibrio y estabilidad.</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

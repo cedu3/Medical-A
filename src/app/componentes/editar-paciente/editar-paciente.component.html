@@ -1,0 +1,34 @@
+<div *ngIf="paciente" class="editar-paciente-container">
+    <h2>Editar Paciente</h2>
+    <form (ngSubmit)="actualizarPaciente()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="paciente.nombre" name="nombre" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="paciente.fechaNacimiento" name="fechaNacimiento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput [(ngModel)]="paciente.correoElectronico" name="correoElectronico" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Número de Teléfono</mat-label>
+        <input matInput [(ngModel)]="paciente.numeroTelefono" name="numeroTelefono" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>DNI</mat-label>
+        <input matInput [(ngModel)]="paciente.dni" name="dni" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Actualizar Paciente</button>
+    </form>
+  </div>
+  

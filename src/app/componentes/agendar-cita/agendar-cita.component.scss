@@ -1,0 +1,52 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 30%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+
+  mat-toolbar {
+    align-items: center;
+    padding: 16px;
+    margin: 20px;
+    display: flex;
+  }
+  
+  mat-toolbar button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  
+  }

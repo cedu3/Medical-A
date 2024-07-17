@@ -1,0 +1,47 @@
+mat-card {
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-form-field {
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  
+  button[mat-raised-button] {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-weight: 500;
+    background-color: antiquewhite;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  mat-toolbar {
+    align-items: center;
+    padding: 16px;
+    margin: 20px;
+    display: flex;
+  }
+  
+  mat-toolbar button {
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  mat-toolbar button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  
+  }

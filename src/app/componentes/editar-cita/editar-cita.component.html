@@ -1,0 +1,28 @@
+<div *ngIf="cita" class="editar-cita-container">
+    <h2>Editar Cita</h2>
+    <form (ngSubmit)="actualizarCita()">
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha y Hora</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="cita.fechaHora" name="fechaHora">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Paciente</mat-label>
+        <mat-select [(value)]="cita.pacienteId" name="paciente">
+          <mat-option *ngFor="let paciente of pacientes" [value]="paciente.id">{{ paciente.nombre }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Especialista</mat-label>
+        <mat-select [(value)]="cita.especialistaId" name="especialista">
+          <mat-option *ngFor="let especialista of especialistas" [value]="especialista.id">{{ especialista.nombre }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Actualizar Cita</button>
+    </form>
+  </div>
+  
